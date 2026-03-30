@@ -1,0 +1,809 @@
+/*************************************************/
+/* NAVIGATION D’ORIGINE MASQUÉE                  */
+/*************************************************/
+
+#headerbar-top,
+#site-desc {
+  display: none !important;
+}
+
+/*************************************************/
+/* FOOTER / STATISTIQUES                         */
+/*************************************************/
+
+.statistics {
+  background-color: rgb(4 6 12 / .88);
+  color: #9ca8be;
+  font-size: 1.3rem;
+  padding: 24px 0;
+  border-top: 1px solid #3a3f49;
+}
+
+/*************************************************/
+/* CLOSING SECTION                               */
+/*************************************************/
+
+#alterra-closing-section {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: rgb(4 6 12 / .88);
+}
+
+#alterra-closing-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.alterra-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(to bottom, rgba(5, 8, 15, 0.2), rgba(5, 8, 15, 0.85)),
+    radial-gradient(circle at 60% 40%, rgba(120, 170, 255, 0.15), transparent 60%);
+  border-top: 1px solid #3a3f49;
+  border-bottom: 1px solid #3a3f49;
+}
+
+.alterra-closing-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 8%;
+}
+
+.alterra-closing-name {
+  margin-bottom: 12px;
+  margin-left: 15%;
+  color: #cfd8ff;
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.alterra-closing-quote {
+  max-width: 550px;
+  color: #9ca8be;
+  font-family: "Georgia", serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 2.3;
+  text-shadow: 0 0 8px rgba(120, 170, 255, 0.2);
+}
+/*************************************************/
+/* RESPONSIVE                                    */
+/*************************************************/
+
+@media screen and (max-width: 980px) {
+  .alterra-statistics .wrap {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .alterra-closing-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alterra-closing-visual {
+    flex: none;
+  }
+
+  .alterra-closing-text {
+    width: 100%;
+  }
+
+  .alterra-closing-name {
+    font-size: 55px;
+  }
+
+  .alterra-closing-quote {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding-top: 60px !important;
+  }
+
+  #alterra-nav {
+    height: 60px;
+  }
+
+  .alterra-nav-inner {
+    height: 60px;
+    padding: 0 14px;
+    gap: 18px;
+  }
+
+  .alterra-nav-title {
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 0 6px;
+  }
+
+  .alterra-nav-item {
+    width: 28px;
+    height: 28px;
+  }
+
+  .alterra-nav-item i {
+    font-size: 21px;
+  }
+
+  .alterra-nav-item img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .alterra-home {
+    flex-direction: column;
+  }
+
+  .alterra-slider-col,
+  .alterra-news-col {
+    width: 100%;
+  }
+
+  .post-head-content {
+    padding: 16px 22px;
+  }
+
+  .post-character-rank {
+    position: static;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .alterra-nav-inner {
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .alterra-nav-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .alterra-nav-item {
+    width: 24px;
+    height: 24px;
+  }
+
+  .alterra-nav-item i {
+    font-size: 18px;
+  }
+
+  .alterra-nav-item img {
+    width: 18px;
+    height: 18px;
+  }
+}
+/*************************************************/
+/* PAGE PROFIL                                  */
+/*************************************************/
+/* ---------- BASE ---------- */
+
+.alterra-profile-shell {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+}
+
+.page-title.alterra-profile-title,
+.page-title.alterra-rpg-title {
+  margin: 0 0 22px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  color: #dddfe6 !important;
+  line-height: 1.1;
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.85),
+    0 0 12px rgba(120,150,220,0.08);
+}
+
+.page-title.alterra-profile-title {
+  font-size: 3rem;
+}
+
+.page-title.alterra-rpg-title {
+  font-size: 2.6rem;
+  margin-top: 26px;
+}
+
+.page-title.alterra-profile-title a,
+.page-title.alterra-profile-title .gen,
+.page-title.alterra-rpg-title a,
+.page-title.alterra-rpg-title .gen {
+  color: #cfd8f6 !important;
+}
+
+/* ---------- TOP PROFILE LAYOUT ---------- */
+
+.alterra-profile-top.panel.bg1 {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 26px !important;
+  overflow: visible;
+}
+
+.alterra-profile-card,
+.alterra-profile-subcard {
+  position: relative;
+  padding: 28px 28px 24px;
+  background:
+    linear-gradient(180deg, rgba(8,12,24,0.78) 0%, rgba(4,8,18,0.90) 100%);
+  border: 1px solid rgba(135, 150, 180, 0.15);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 14px 36px rgba(0,0,0,0.34);
+  overflow: hidden;
+}
+
+.alterra-profile-card::before,
+.alterra-profile-subcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.10;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(120,160,255,0.16), transparent 30%),
+    radial-gradient(circle at 80% 32%, rgba(155,185,255,0.08), transparent 24%);
+}
+
+.alterra-profile-card-left {
+  float: left;
+  width: 28%;
+  min-height: 460px;
+}
+
+.alterra-profile-right-column {
+  float: right;
+  width: 68%;
+}
+
+.alterra-profile-card-right {
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 22px;
+}
+
+.alterra-profile-under-right {
+  width: 100%;
+}
+
+.alterra-profile-contact {
+  float: left;
+  width: 60%;
+  min-height: 180px;
+}
+
+.alterra-profile-stats {
+  float: right;
+  width: 36%;
+  min-height: 180px;
+}
+
+/* ---------- TITRES ---------- */
+
+.alterra-card-title,
+.alterra-card-subtitle {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  color: #e2e7f0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+.alterra-card-title {
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(170,185,210,0.16);
+  font-size: 1.85rem;
+}
+
+.alterra-card-subtitle {
+  margin: 18px 0 10px;
+  font-size: 1.35rem;
+}
+
+/* ---------- AVATAR ---------- */
+
+.alterra-avatar-block {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.alterra-avatar-label {
+  display: none;
+}
+
+.alterra-avatar-image img {
+  display: inline-block;
+  width: 100%;
+  max-width: 245px;
+  height: auto;
+  border: 1px solid rgba(180, 200, 230, 0.16);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 14px 30px rgba(0,0,0,0.36);
+}
+
+/* ---------- ROWS ---------- */
+
+.alterra-meta-row,
+.alterra-profile-row {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 14px;
+  padding: 10px 0 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+
+.alterra-meta-row dt,
+.alterra-profile-row dt {
+  float: left;
+  width: 34%;
+  margin: 0;
+  font-weight: 600;
+  color: #a8b6d1;
+  line-height: 1.6;
+}
+
+.alterra-meta-row dd,
+.alterra-profile-row dd {
+  float: right;
+  width: 62%;
+  margin: 0;
+  color: #edf2f8;
+  line-height: 1.6;
+}
+
+.alterra-group-item {
+  margin-bottom: 4px;
+}
+
+.alterra-group-item a,
+.alterra-profile-row a,
+.alterra-meta-row a {
+  color: #d8e4ff !important;
+  text-decoration: none;
+}
+
+.alterra-group-item a:hover,
+.alterra-profile-row a:hover,
+.alterra-meta-row a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- FOLLOW BUTTON ---------- */
+
+.alterra-follow-block {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+.alterra-follow-block .button1 {
+  min-width: 180px;
+}
+
+/* ---------- RIGHT PROFILE ---------- */
+
+.alterra-profile-fields {
+  position: relative;
+  z-index: 2;
+}
+
+.alterra-post-stats {
+  display: inline-block;
+  margin-left: 8px;
+  color: #aebcd8;
+}
+
+.alterra-post-links {
+  margin-top: 8px;
+  padding-left: 4px;
+}
+
+/* ---------- ADMIN COMMENT ---------- */
+
+.alterra-admin-comment-row textarea {
+  width: 100%;
+  min-height: 130px;
+  box-sizing: border-box;
+}
+
+/* ---------- RPG ---------- */
+
+.alterra-rpg-shell.panel.bg1 {
+  background:
+    linear-gradient(180deg, rgba(8,12,24,0.78) 0%, rgba(4,8,18,0.90) 100%) !important;
+  border: 1px solid rgba(135,150,180,0.15);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 14px 36px rgba(0,0,0,0.34);
+  padding: 30px 30px 24px !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+.alterra-rpg-image {
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+.alterra-rpg-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.alterra-rpg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.alterra-rpg-stat {
+  position: relative;
+  min-height: 180px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid rgba(150,165,195,0.14);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 8px 20px rgba(0,0,0,0.26);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgba(7,11,22,0.92);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.alterra-rpg-stat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4,8,18,0.12) 0%,
+    rgba(4,8,18,0.36) 100%
+  );
+  transition: background 0.25s ease;
+  z-index: 1;
+}
+
+.alterra-rpg-stat:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 14px 28px rgba(0,0,0,0.34);
+}
+
+.alterra-rpg-stat:hover::before {
+  background: rgba(4,8,18,0.72);
+}
+
+.alterra-rpg-stat-name,
+.alterra-rpg-stat-value {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.alterra-rpg-stat:hover .alterra-rpg-stat-name,
+.alterra-rpg-stat:hover .alterra-rpg-stat-value {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alterra-rpg-stat-name {
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  color: #e2e7f0;
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.85),
+    0 0 8px rgba(120,150,220,0.12);
+}
+
+.alterra-rpg-stat-value {
+  font-size: 1.7rem;
+  color: #d4dcf8;
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.85),
+    0 0 8px rgba(120,150,220,0.12);
+}
+
+/* ---------- FORUMACTIF EDIT ---------- */
+
+.ajax-profil_parent {
+  position: relative;
+}
+
+.ajax-profil_edit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+}
+
+.ajax-profil_valid {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* ---------- UTILS ---------- */
+
+.clear {
+  clear: both;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 980px) {
+  .alterra-profile-card-left,
+  .alterra-profile-right-column,
+  .alterra-profile-contact,
+  .alterra-profile-stats {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .alterra-rpg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-title.alterra-profile-title {
+    font-size: 2.4rem;
+  }
+
+  .page-title.alterra-rpg-title {
+    font-size: 2.1rem;
+  }
+
+  .alterra-profile-card,
+  .alterra-profile-subcard,
+  .alterra-rpg-shell.panel.bg1 {
+    padding: 20px 18px 18px !important;
+  }
+
+  .alterra-rpg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alterra-meta-row dt,
+  .alterra-profile-row dt,
+  .alterra-meta-row dd,
+  .alterra-profile-row dd {
+    float: none;
+    width: 100%;
+  }
+
+  .alterra-meta-row dd,
+  .alterra-profile-row dd {
+    margin-top: 6px;
+  }
+
+  .alterra-rpg-stat::before {
+    background: rgba(4,8,18,0.62);
+  }
+
+  .alterra-rpg-stat-name,
+  .alterra-rpg-stat-value {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Uniformisation des labels du bloc profil */
+.alterra-profile-card-right .alterra-profile-row,
+.alterra-profile-card-right .alterra-profile-row dt,
+.alterra-profile-card-right .alterra-profile-row dd,
+.alterra-profile-card-right .alterra-profile-row dd *,
+.alterra-profile-card-right .alterra-profile-row dt * {
+  color: #edf2f8 !important;
+}
+
+/* Et remettre les labels à la bonne teinte */
+.alterra-profile-card-right .alterra-profile-row dt,
+.alterra-profile-card-right .alterra-profile-row dt * {
+  color: #a8b6d1 !important;
+  font-weight: 600;
+}
+/*************************************************/
+/* RÉPONSE RAPIDE — ALTERRA                      */
+/*************************************************/
+
+.alterra-quickreply-shell {
+  max-width: 1180px;
+  margin: 34px auto 40px;
+  position: relative;
+}
+
+.alterra-quickreply-frame {
+  position: relative;
+  padding: 26px 30px 28px;
+background: linear-gradient(180deg,rgb(8 12 22 / .52) 0%,rgb(5 8 16 / .46) 100%);
+  border: 1px solid rgba(185, 190, 205, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 18px 36px rgba(0,0,0,0.28);
+}
+
+/* Bloc quick reply Forumactif */
+.alterra-quickreply-frame .quickreply,
+.alterra-quickreply-frame #quick_reply,
+.alterra-quickreply-frame form[action*="posting"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Conteneur éditeur */
+.alterra-quickreply-frame .sceditor-container,
+.alterra-quickreply-frame .sceditor-container iframe,
+.alterra-quickreply-frame .sceditor-container textarea {
+  background: transparent !important;
+}
+
+.alterra-quickreply-frame .sceditor-container {
+  border: 1px solid rgba(185, 190, 205, 0.18) !important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 10px 24px rgba(0,0,0,0.20) !important;
+  background:
+    linear-gradient(180deg, rgba(10,15,28,0.88) 0%, rgba(7,11,22,0.92) 100%) !important;
+}
+
+/* Barre d’outils */
+.alterra-quickreply-frame .sceditor-toolbar {
+  background:
+    linear-gradient(180deg, rgba(18,24,38,0.95) 0%, rgba(12,17,30,0.96) 100%) !important;
+  border-bottom: 1px solid rgba(185, 190, 205, 0.14) !important;
+  padding: 8px 10px !important;
+}
+
+.alterra-quickreply-frame .sceditor-group {
+  background: rgba(255,255,255,0.02) !important;
+  border: 1px solid rgba(185,190,205,0.08) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin: 0 6px 6px 0 !important;
+}
+
+/* Zone de texte */
+.alterra-quickreply-frame textarea,
+.alterra-quickreply-frame .sceditor-container iframe {
+  min-height: 300px !important;
+  color: #dbe2ed !important;
+  font-family: Georgia, serif !important;
+  font-size: 1.02rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Si textarea visible */
+.alterra-quickreply-frame textarea {
+  padding: 22px !important;
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0.01) 60%, rgba(0,0,0,0) 100%),
+    linear-gradient(180deg, rgba(10,15,28,0.92) 0%, rgba(7,11,22,0.96) 100%) !important;
+  border: none !important;
+  resize: vertical;
+}
+
+/* Bas du quick reply */
+.alterra-quickreply-frame .submit-buttons,
+.alterra-quickreply-frame .center,
+.alterra-quickreply-frame .right-box {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Boutons */
+.alterra-quickreply-frame input.button1,
+.alterra-quickreply-frame input.button2,
+.alterra-quickreply-frame button,
+.alterra-quickreply-frame .button1,
+.alterra-quickreply-frame .button2 {
+  background: linear-gradient(180deg, rgba(230,125,120,0.95) 0%, rgba(204,91,91,0.95) 100%) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  color: #fff !important;
+  font-family: Georgia, serif !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.4px;
+  padding: 9px 18px !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22) !important;
+}
+
+.alterra-quickreply-frame input.button1:hover,
+.alterra-quickreply-frame input.button2:hover,
+.alterra-quickreply-frame button:hover,
+.alterra-quickreply-frame .button1:hover,
+.alterra-quickreply-frame .button2:hover {
+  filter: brightness(1.06);
+}
+
+/* Éléments annexes */
+.alterra-quickreply-frame fieldset,
+.alterra-quickreply-frame .panel,
+.alterra-quickreply-frame .inner,
+.alterra-quickreply-frame .h3,
+.alterra-quickreply-frame .table1 {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Georgia",serif !important;
+  color: #d9dde2 !important;
+  text-shadow: 0 0 3px rgb(160 200 255 / .35),0 0 10px rgb(110 160 255 / .25),0 0 18px rgb(70 120 255 / .15),0 1px 2px rgb(0 0 0 / .85);
+  font-size: 1.5rem !important;
+  letter-spacing: 1.5px !important;
+  line-height: 1.2 !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .alterra-quickreply-frame {
+    padding: 20px 18px 22px;
+  }
+
+  .alterra-quickreply-frame::before {
+    font-size: 1.6rem;
+  }
+.alterra-quickreply-frame textarea,
+  .alterra-quickreply-frame .sceditor-container iframe {
+    min-height: 240px !important;
+  }
+}
+/* Texte dans l'éditeur */
+.alterra-quickreply-frame .sceditor-container iframe,
+.alterra-quickreply-frame textarea {
+  font-size: 1.5rem !important; /* ajuste ici */
+  line-height: 1.8 !important;
+  font-family: Georgia, serif !important;
+}
+  /* Force le style dans l’éditeur */
+.sceditor-container iframe {
+  font-size: 1.1rem !important;
+}
